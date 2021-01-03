@@ -1,0 +1,56 @@
+main{
+    .signup-section{
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        gap: 40px;
+
+        h1{
+            text-align: center;
+            border-bottom: 1px solid $hr-color;
+            width: 100%;
+            margin: 0;
+        }
+        form{
+            display: flex;
+            flex-flow: column;
+            gap: 40px;
+            align-items: center;
+            min-width: 300px;
+            max-width: 800px;
+            
+    
+            .fields{
+                display: flex;
+                flex-flow: wrap;
+                column-gap: 40px;
+    
+                div{
+                    min-width: 300px;
+                    flex: 1;
+                }
+            }
+    
+            .newsLetter{
+                display: flex;
+    
+                input{
+                    width: auto;
+                    margin-left: 10px;
+                }
+            }
+            .buttons{
+                max-width: 300px;
+                button{
+                    min-width: 300px;
+    
+                    &:nth-of-type(2){
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    
+}

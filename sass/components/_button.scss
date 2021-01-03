@@ -1,0 +1,73 @@
+button{
+    border: none;
+}
+.btn,a,.icon,.holder{
+    cursor: pointer;
+
+    &:focus{
+        opacity: .8;
+        transform: scale(1.02);
+
+        .soundcloud{
+            fill: lighten($soundcloud-color, 10%);
+        }
+        .youtube{
+            fill: lighten($youtube-color, 10%);
+        }
+        .twitter{
+            fill: lighten($twitter-color, 10%);
+        }
+
+    }
+
+    &:hover{
+        opacity: .8;
+        transform: scale(1.04);
+
+        .soundcloud{
+            fill: $soundcloud-color;
+        }
+        .youtube{
+            fill: $youtube-color;
+        }
+        .twitter{
+            fill: $twitter-color;
+        }
+
+    }
+
+    &:active{
+        filter: invert(100%);
+    }
+}
+
+.btn{
+    border-radius: 7px;
+    background-color: $button-color;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-google{
+        background-color: #efefef;
+    }
+    &-facebook{
+        background-color: $facebook-color;
+    }
+}
+
+.listItemBurger{
+    display: none;
+}
+
+.icon{
+    
+}
+
+@media(max-width: 600px){
+    .listItemBurger{
+        display: flex;
+        flex-flow: column;
+    }
+}

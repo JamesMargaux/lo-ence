@@ -1,0 +1,47 @@
+footer{
+    @include set-background-color($primary-color);
+    height: 312px;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    z-index: 1;
+
+    div{
+        flex: 1;
+        
+        svg{
+            fill: $secondary-color;
+        }
+
+    }
+
+    p{
+        flex: 1;
+    }
+
+}
+
+footer + a{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0;
+    display: none;
+    svg{
+      fill: #a1a1a1;  
+    }
+    z-index: 2;
+}
+
+@media(max-width: 600px){
+    footer{
+
+        p{
+            width: 65%;
+            text-align: center;
+        }
+
+    }
+}

@@ -1,0 +1,167 @@
+main{
+    background-image: url("../../images/drum-wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: 0 300px;
+    .product-section{
+        display: flex;
+        flex-flow: column;
+        padding: 70px 315px;
+        align-items: center;
+
+        .product{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            img{
+                flex: 1;
+                
+                max-width: 684px;
+            }
+            .production-details{
+                flex: 1;
+                display: flex;
+                flex-flow: column;
+                row-gap: 30px;
+
+                h2{
+                    border-bottom: 1px $hr-color solid;
+                    margin-bottom: 0
+                    
+                }
+
+                .preview{
+                    @include set-background-color($primary-color-variant2);
+                    padding: 20px 33px;
+                    border-radius: 7px;
+                    display: grid;
+                    grid-template-areas: "preview preview"
+                                         "kick snare";
+                    h4{
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        grid-area: preview;
+                    }
+                    div{
+                        display: flex;
+                        align-items: center;
+                        padding-left: 20px;
+                        &:nth-of-type(2){
+                            border-left: 1px solid $secondary-color;
+                        }
+                    }
+                    .kick{
+                        grid-area: kick;
+                        
+                    }
+                    .snare{
+                        grid-area: snare;
+                    }
+                }
+                .toCart{
+                    align-self: center;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    .price{
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+                    button{
+                        max-width: 226px;
+                        min-width: 178px;
+                    }
+                }
+                
+            }
+        }
+    }
+    .softwares{
+        display: flex;
+        flex-flow: row wrap !important;
+        align-items: flex-start !important;
+        justify-content: center;
+        column-gap: 32px;background-color: transparent!important;
+        min-height: 200px!important;
+        max-height: 290px!important;
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media(max-width:600px){
+    main{
+        background-position: 0 400px;
+        .product-section{
+            padding: 0 40px 30px;
+
+            .product{
+                display: flex;
+                flex-wrap: wrap;
+                img{
+                    width: 100%;
+                }
+                .production-details{
+                    row-gap: 15px;
+    
+                    h2{
+                        padding-bottom: 10px;
+                    }
+    
+                    .preview{
+                        @include set-background-color($primary-color-variant2);
+                        padding: 20px 33px;
+                        border-radius: 7px;
+                        display: grid;
+                        grid-template-areas: "preview"
+                                             "kick"
+                                             "snare";
+                        h4{
+                            margin-top: 0;
+                            margin-bottom: 20px;
+                            text-align: center;
+                            grid-area: preview;
+                        }
+                        div{
+                            display: flex;
+                            align-items: center;
+                            padding: 10px;
+                            &:nth-of-type(2){
+                                border: 0;
+                                border-top: 1px solid $secondary-color;
+                            }
+                        }
+                        .kick{
+                            grid-area: kick;
+                            
+                        }
+                        .snare{
+                            grid-area: snare;
+                        }
+                    }
+                    .toCart{
+                        row-gap: 15px;
+                        .price{
+                            font-size: 18px;
+                        }
+                        button{
+                            max-width: 226px;
+                            min-width: 178px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .softwares{
+            padding: 25px 40px!important;
+            column-gap: 10px!important;
+            img{
+                min-width: 20px!important;
+                max-width: 50px!important;
+            }
+        }
+    }
+}

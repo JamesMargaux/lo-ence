@@ -1,0 +1,129 @@
+header{
+    background-color: $primary-color;
+    color: $secondary-color;
+    height: 100px;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+
+    .logo{
+        flex: 1;
+        transition: 200ms ease;
+    }
+
+    nav{
+        flex: 2;
+        align-self: stretch;
+        display: flex;
+        justify-content: center;
+
+        ul{
+            display: flex;
+            min-width: 420px;
+        }
+        
+        li{
+            margin: 0 15px;
+            flex: 1;
+        }
+
+        a,.humburger2{
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .active{
+            border-top: transparent 10px solid;
+            border-bottom: $secondary-color 10px solid;
+        }
+    }
+
+    .nav-ext{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .searchBar{
+            display: none;
+            width: 0;
+            background-color: transparent;
+            color: $secondary-color;
+            border: 1px solid $secondary-color;
+        }
+
+        .icon{
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .humburger{
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 600px){
+    
+    header{
+        height: 85px;
+        padding: 0 30px;
+
+        .logo{
+            flex: none;
+        }
+
+        nav{
+            background-color: $primary-color;
+            z-index: 3;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 0;
+            display: none;
+
+            ul{
+                flex-flow: column;
+                justify-content: flex-start;
+                min-width: 100%;
+            }
+
+            li{
+                height: 85px;
+                padding: 15px 0;
+                margin: 0;
+                flex: none;
+            }
+
+            .active{
+                border: 0;
+                border-left: $secondary-color 10px solid;
+                border-right: transparent 10px solid;
+            }
+
+            .humburger2{
+                align-self: center;
+            }
+        }
+
+        .nav-ext{
+            flex: 2;
+
+            .icon{
+                margin: 0 5px;
+            }
+
+            .cart{
+                display: none;
+            }
+            .humburger{
+                display: flex;
+            }
+        }
+    }
+}
